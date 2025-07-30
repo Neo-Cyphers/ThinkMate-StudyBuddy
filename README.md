@@ -1,88 +1,96 @@
 # ThinkMate-StudyBuddy
 
-ThinkMate is a web-based study tool designed to enhance learning through personalized study sessions, quizzes, flashcards, and a comprehensive dashboard. It supports students and lifelong learners by offering customizable learning preferences, AI-driven study assistance, and progress tracking.
+[![Visit Site](https://img.shields.io/badge/Live%20Demo-Access-green?style=flat-square)](https://neo-cyphers.github.io/ThinkMate-StudyBuddy/ThinkMate_code/app.html)
 
-## Table of Contents
+**ThinkMate-StudyBuddy** is a versatile web-based learning platform designed to empower students and lifelong learners with personalized study tools. It offers a suite of features including customizable study sessions, interactive quizzes, flashcard creation, and a detailed dashboard to track progress. The application integrates advanced AI technologies to provide an adaptive learning experience, supporting a variety of topics and learning preferences.
 
-- Features
-- Installation
-- Usage
-- Technologies Used
-  Project Structure
-- Contributing
+## Interface Preview
 
+![ThinkMate Interface Preview](assets/ThinkMate.png)
 
-## Features
+> _Note: Place the image `301c498f-4e40-468d-aac8-de57249935df.png` into the `/assets` folder and rename it to `interface-preview.png`._
 
-ThinkMate provides a robust set of tools to support learning:
+##  Table of Contents
 
-- **Personalization Center** (`settings.html`): Customize the visual theme (Light, Dark, Blue, Green), AI personality (Professor, Mentor, Researcher, Coach), learning preferences (visual explanations, real-world examples, technical terminology), and content difficulty (Beginner to Expert).
-- **Study Sessions** (`app.html`): Upload study materials (PDF or TXT), select topics (e.g., General Knowledge, AI, Science), interact with an AI buddy, and manage saved sessions.
-- **Quizzes** (`quiz.html`): Generate custom quizzes with adjustable subjects, number of questions, and difficulty levels (Easy, Medium, Hard). Track scores and review results.
-- **Flashcards** (`flashcards.html`): Create and study flashcard decks with options to shuffle, auto-flip, and save progress. Review performance metrics like known cards and time spent.
-- **Dashboard** (`dashboard.html`): Monitor study progress (overall, concepts, history), view recent activity, manage study materials, notes, and bookmarks.
-- **API Key Management**: Securely managed API keys for system integration, with options to refresh status or contact support for key rotation.
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Technologies Used](#technologies-used)
+- [Project Structure](#project-structure)
+- [Contributing](#contributing)
+
+##  Features
+
+### Personalization Center (`settings.html`)
+
+- Customize themes: Light, Dark, Blue, Green
+- Choose AI personality: Professor, Mentor, Researcher, Coach
+- Set learning preferences: visual explanations, real-world examples, technical terminology
+- Select difficulty: Beginner to Expert
+- Save/reset preferences
+
+### Study Sessions (`app.html`)
+
+- Upload study material (PDF/TXT)
+- Select topics: General Knowledge, AI, History, Science, Math
+- AI buddy assistance with voice input (speech-to-text)
+- Save, download, and manage sessions
+- Vector DB status tracking (e.g., 0 chunks)
+
+### Quizzes (`quiz.html`)
+
+- Custom quiz creation by topic, number, and difficulty
+- Real-time score tracking and result review
+- API key status refresh and fallback contact support
+- Loading feedback: “Generating your custom quiz…”
+
+### Flashcards (`flashcards.html`)
+
+- Create decks by subject, number, difficulty
+- Auto-flip, shuffle, and save progress
+- Mark as “I Knew This” or “Needs Review”
+- Metrics: Time spent, known/unknown cards
+- Feedback: “Building your deck…”
+
+### Dashboard (`dashboard.html`)
+
+- Progress metrics: Overall, Concepts, History
+- Manage notes, bookmarks, and materials
+- View recent activity and continue sessions
+- “Ask AI Buddy” button for real-time help
+
+###  Speech-to-Text Support
+
+- Voice input for hands-free topic selection and Q&A
+- Integrated across study sessions
+
+### Integration of 3+ AI Technologies
+
+- **NLP:** For AI explanations and learning conversations  
+- **Vision AI:** Extracts content/images from uploaded PDFs  
+- **Speech Recognition:** Enables voice commands
+
+### Language, AI & Data Integration
+
+- Language AI for conversation
+- Vision & speech AI for interaction
+- Vector DB for persistent material storage
+
+### User-Friendly UI
+
+- Unified navigation bar across all pages
+- Drag-and-drop interface, visual timers, and auto-progress tracking
+
+### Persistent Storage & Fallbacks
+
+- Saves user settings, decks, scores, and study history
+- Graceful error handling and status prompts
+- Secure API key management
 
 ## Installation
 
-To run ThinkMate locally, follow these steps:
+### 1. Clone the Repository
 
-1. **Clone the Repository**:
-
-        git clone https://github.com/yourusername/thinkmate.gitcd thinkmate
-
-    
-2. **Set Up Environment**:
-
-    - Configure API keys by contacting the system administrator (as noted in `app.html` and `quiz.html`).
-    - Ensure a compatible browser (e.g., Chrome, Firefox) for optimal rendering of HTML and JavaScript.
-3. **Run the Application**:
-
-    - Host the files on a local server (e.g., using [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) in VS Code or a simple HTTP server):
-
-            npx http-server
-    - Open `http://localhost:8080` in your browser and navigate to `app.html` or other pages.
-
-## Usage
-
-1. **Accessing the Application**:
-
-    - Start at `app.html` for study sessions or navigate to `settings.html`, `quiz.html`, `flashcards.html`, or `dashboard.html` via the navigation bar.
-    - The navigation bar, present across all pages, allows seamless switching between Study, Quiz, Flashcards, and Dashboard.
-2. **Personalization**:
-
-    - Go to `settings.html` to set your preferred visual theme, AI personality, learning preferences, and difficulty level.
-    - Save preferences or reset options as needed.
-3. **Study Sessions**:
-
-    - In `app.html`, upload study materials (PDF/TXT) and select a topic to begin a learning session.
-    - Interact with the AI buddy for explanations and save or load sessions for continuity.
-4. **Quizzes**:
-
-    - In `quiz.html`, configure a quiz by selecting a subject, number of questions, and difficulty.
-    - Answer questions, submit responses, and review your score upon completion.
-5. **Flashcards**:
-
-    - In `flashcards.html`, create a deck by choosing a subject, number of cards, and difficulty.
-    - Study cards with options to shuffle or auto-flip, and mark cards as "Known" or "Needs Review."
-6. **Dashboard**:
-
-    - In `dashboard.html`, track progress with percentage-based metrics for overall learning, concepts, and history.
-    - Manage study materials, notes, and bookmarks, and review recent activity.
-
-## Technologies Used
-
-- **HTML5**: Core structure of the application pages (`app.html`, `settings.html`, `quiz.html`, `flashcards.html`, `dashboard.html`).
-- **CSS3**: Styling for responsive and visually appealing interfaces (assumed to be in an external stylesheet, e.g., `styles.css`).
-- **JavaScript**: Dynamic functionality for quiz generation, flashcard interactions, and session management (assumed to be in an external script, e.g., `script.js`).
-- **Vector DB**: Referenced in `app.html` for storing study material chunks, likely powered by a backend service.
-- **API Integration**: Secure API key management for system operations.
-
-## Project Structure
-
-    thinkmate/├── app.html # Main study session page.
-              ├── settings.html # Personalization settings page.
-              ├── quiz.html # Quiz creation and interaction page.
-              ├── flashcards.html # Flashcard deck creation and study page.
-              ├── dashboard.html # Study progress and resource management page.
-        
+```bash
+git clone https://github.com/yourusername/thinkmate.git
+cd thinkmate
