@@ -127,9 +127,9 @@ To run ThinkMate-StudyBuddy locally, follow these steps:
 
     ThinkMate-StudyBuddy/
     ├── ThinkMate_code/│ 
-    ├── app.html # Main study session page│ 
-    ├── dashboard.html # Study progress and resource management page│ 
-    ├── flashcards.html # Flashcard deck creation and study page│ 
-    ├── quiz.html # Quiz creation and interaction page│ 
-    ├── settings.html # Personalization settings page
+            ├── app.html # Main study session page│ 
+            ├── dashboard.html # Study progress and resource management page│ 
+            ├── flashcards.html # Flashcard deck creation and study page│ 
+            ├── quiz.html # Quiz creation and interaction page│ 
+            ├── settings.html # Personalization settings page
     ├── README.md # Project documentation
