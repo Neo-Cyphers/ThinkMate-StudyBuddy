@@ -8,8 +8,6 @@
 
 ![ThinkMate Interface Preview](assets/ThinkMate.png)
 
-> _Note: Place the image `301c498f-4e40-468d-aac8-de57249935df.png` into the `/assets` folder and rename it to `interface-preview.png`._
-
 ##  Table of Contents
 
 - [Features](#features)
