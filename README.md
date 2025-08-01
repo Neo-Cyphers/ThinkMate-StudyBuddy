@@ -10,13 +10,12 @@
 
 ##  Table of Contents
 
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Technologies Used](#technologies-used)
-- [Project Structure](#project-structure)
-- [Contributing](#contributing)
-
+- Features 
+- Installation 
+- Usage 
+- Technologies Used 
+- Project Structure
+- 
 ##  Features
 
 ### Personalization Center (`settings.html`)
@@ -85,10 +84,52 @@
 - Graceful error handling and status prompts
 - Secure API key management
 
+
 ## Installation
 
-### 1. Clone the Repository
+To run ThinkMate-StudyBuddy locally, follow these steps:
 
-```bash
-git clone https://github.com/yourusername/thinkmate.git
-cd thinkmate
+1. **Clone the Repository**:
+
+        git clone https://github.com/neo-cyphers/ThinkMate-StudyBuddy.gitcd ThinkMate-StudyBuddy
+2. **Set Up Environment**:
+
+    - Ensure you have a modern browser (e.g., Chrome, Firefox) installed.
+    - Configure API keys if required (contact system administrator as noted in app.html and quiz.html).
+3. **Run the Application**:
+
+    - Install a local server (e.g., Node.js with http-server):
+
+            npm install -g http-server
+    - Start the server from the ThinkMate\_code directory:
+
+            cd ThinkMate_codehttp-server
+    - Open http://localhost:8080 in your browser to access app.html.
+
+## Usage
+
+- Start at app.html or navigate via the navigation bar to settings.html, quiz.html, flashcards.html, or dashboard.html.
+- Use the form below to access the live version:
+
+    Access ThinkMate-StudyBuddy
+
+## Technologies Used
+
+- **HTML5**: Core structure of the application pages.
+- **CSS3**: Responsive and visually appealing interface.
+- **JavaScript**: Dynamic interactions.
+- **Vector Database**: Stores study material chunks.
+- **API Integration**: Secure API key management.
+- **Speech-to-Text API**: Voice input support.
+- **AI APIs**: NLP, vision AI, speech recognition.
+
+## Project Structure
+
+    ThinkMate-StudyBuddy/
+    ├── ThinkMate_code/│ 
+    ├── app.html # Main study session page│ 
+    ├── dashboard.html # Study progress and resource management page│ 
+    ├── flashcards.html # Flashcard deck creation and study page│ 
+    ├── quiz.html # Quiz creation and interaction page│ 
+    ├── settings.html # Personalization settings page
+    ├── README.md # Project documentation
